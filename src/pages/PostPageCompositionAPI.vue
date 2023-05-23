@@ -25,10 +25,8 @@
     import {useSortedAndSearchedPosts} from "../hooks/useSortedAndSearchedPosts";
     import {useSortedPosts} from "../hooks/useSortedPosts";
 
-
-
     export default {
-        name: 'PostPageCompositionAPI',
+        name: 'post-page-compositionAPI',
         components: {MyInput, MySelect, MyButton, MyDialog, PostList, PostForm},
         data() {
             return {
@@ -40,14 +38,14 @@
             }
         },
         setup(props) {
-            const {posts, totalPages, isPostLoadtotalPagesing} = usePost(10);
+            const {posts, totalPages, isPostLoadTotalPages} = usePost(10);
             const {sortedPosts, selectedSort} = useSortedPosts(posts);
             const {searchQuery, sortedAndSearchedPosts} = useSortedAndSearchedPosts(sortedPosts);
 
             return {
                 posts,
                 totalPages,
-                isPostLoadtotalPagesing,
+                isPostLoadTotalPages,
                 sortedPosts,
                 selectedSort,
                 searchQuery,
@@ -58,7 +56,6 @@
 </script>
 
 <style scoped>
-
     .app__btns {
         margin: 15px 0;
         display: flex;
@@ -68,10 +65,5 @@
     form {
         display: flex;
         flex-direction: column;
-    }
-
-    .observer {
-        height: 30px;
-        background: green;
     }
 </style>

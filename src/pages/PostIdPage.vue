@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        name: 'PostIdPage'
+        name: 'post-id-page'
     }
 </script>
 

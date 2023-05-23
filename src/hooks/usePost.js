@@ -4,7 +4,7 @@ import {onMounted, ref} from 'vue';
 export function usePost(limit) {
     let posts = ref([]);
     let totalPages = ref(1);
-    let isPostLoadtotalPagesing = ref(true);
+    let isPostLoadTotalPages = ref(true);
 
     const fetching = () => {
         try {
@@ -16,7 +16,7 @@ export function usePost(limit) {
                     }
                 });
                 posts.value = response.data;
-                isPostLoadtotalPagesing.value = false;
+                isPostLoadTotalPages.value = false;
                 totalPages.value = Math.ceil(response.headers['X-Total-Count'.toLowerCase()] / limit)
             }, 300)
         } catch (e) {
@@ -28,6 +28,6 @@ export function usePost(limit) {
     return {
         posts,
         totalPages,
-        isPostLoadtotalPagesing
+        isPostLoadTotalPages
     }
 }

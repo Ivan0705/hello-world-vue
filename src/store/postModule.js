@@ -57,7 +57,6 @@ export const postModule = {
                     commit("setLoading", false);
                     commit("setTotalPages", Math.ceil(response.headers['X-Total-Count'.toLowerCase()] / state.limit));
                 }, 300)
-
             } catch (e) {
                 alert('Ошибка: ' + e)
             }

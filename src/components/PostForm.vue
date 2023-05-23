@@ -14,7 +14,7 @@
     import MyInput from "./UI/MyInput";
 
     export default {
-        name: 'PostForm',
+        name: 'post-form',
         components: {MyInput, MyButton},
         data() {
             return {
@@ -35,9 +35,7 @@
                 };
             },
         }
-
     }
-
 </script>
 
 <style scoped>

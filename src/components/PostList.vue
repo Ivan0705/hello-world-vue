@@ -13,7 +13,7 @@
     import PostItem from "./PostItem";
 
     export default {
-        name: 'PostList',
+        name: 'post-list',
         components: {PostItem},
         props: {
             posts: {
@@ -21,10 +21,8 @@
                 required: true
             }
         },
-
     }
 </script>
 
 <style scoped>
-
 </style>

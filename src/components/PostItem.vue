@@ -18,7 +18,7 @@
     import MyButton from "./UI/MyButton";
 
     export default {
-        name: 'PostItem',
+        name: 'post-item',
         components: {MyButton},
         props: {
             post: {
